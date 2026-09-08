@@ -119,6 +119,7 @@ The default password is "ubuntu" unless modified in the d_iris_edit alias comman
 ![Configure RDP connection](imgs/Remmina_IRIS_EDIT.png)
 
 After RDP logon, should be presented with a desktop with "IRIS Editor" shortcut.
+
 <img width="358" height="447" alt="image" src="https://github.com/user-attachments/assets/1209d384-876f-4193-be7d-41b2d3a980d4" />
 
 Double click on this to start vscode with plugins.
