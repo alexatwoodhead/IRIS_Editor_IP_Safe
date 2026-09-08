@@ -34,7 +34,6 @@ d_iris_edit() {
       echo "docker already running"
     else
       echo "starting docker iris_edit"
-      #-p 3389 -p 5900 -p 3350 -p 22 -p 23 
       docker run -d -it --rm --name iris_edit --memory=8g --network no-internet --gpus "device=0" -p 3390 iris_edit /bin/bash -c "while true; do sleep 10; done"
       docker exec -it -u root iris_edit /usr/bin/bash -c "echo \"ubuntu:ubuntu\" | chpasswd"
       docker exec -i -u ubuntu iris_edit /usr/bin/bash -c "echo 'PS1=\"\\[\\033[01;31m\\]\\u@iris_edit\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\] \$ \"\' >> ~/.bashrc"
@@ -95,7 +94,7 @@ Therefore the alias script helps you by changing the remote terminal prompt to:
 * Useful Host name = iris_edit
 * Current directory locaton
 For example:
-<span style='color:red'>ubuntu@iris_edit</span>:<span style='color:#124688'>~/src</span> $
+<img width="314" height="58" alt="image" src="https://github.com/user-attachments/assets/5e606066-4338-448e-b459-0a6fc57c9a61" />
 
 # Stop IRIS Editor
 Context: Host terminal
@@ -127,7 +126,7 @@ Double click on this to start vscode with plugins.
 After launching the editor. Click on the InterSystems logo plugin and expand servers.
 By default the appliance has two connections (172.19.0.3 ) and (172.19.0.4).
 
-![IRIRS Editor preconfigured connnections](Remmina_IRIS_Servers.png)
+<img width="425" height="473" alt="image" src="https://github.com/user-attachments/assets/f379f4fb-cbc9-4f47-9a47-20ebe154ecde" />
 
 Timesaver:
 Note: When an IRIS appliance first runs it has default credentails password.
