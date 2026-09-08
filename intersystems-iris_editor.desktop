@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=IRIS Editor
+Exec=/usr/bin/code --no-sandbox %F
+Terminal=false
+Icon=/home/ubuntu/.config/isc/favicon.ico
+StartupNotify=false
+Path=/home/ubuntu/src
+

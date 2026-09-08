@@ -1,0 +1,22 @@
+{
+    "intersystems.servers": {
+        "iris_3": {
+            "webServer": {
+                "scheme": "http",
+                "host": "172.19.0.3",
+                "port": 52773,
+                "pathPrefix": ""
+            },
+            "username": "superuser"
+        },
+        "iris_4": {
+            "webServer": {
+                "scheme": "http",
+                "host": "172.19.0.4",
+                "port": 52773,
+                "pathPrefix": ""
+            },
+            "username": "superuser"
+        }
+    }
+}
