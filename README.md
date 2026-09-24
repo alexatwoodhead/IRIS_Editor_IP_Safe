@@ -167,7 +167,7 @@ Example of IRIS Editor launch with some 'not connecting' messages:
 <img width="1042" height="866" alt="image" src="https://github.com/user-attachments/assets/2807156f-2bea-4b27-aac4-3bed867097c0" />
 
 # VIM style IRIS editing
-In open VSCode Editor, open the command pallate:
+In open VSCode Editor, open the command palate:
 
 [Shift] + [Control] + p
 
@@ -177,7 +177,7 @@ Accept the selected option.
 
 Shortcuts reminder with code document in view
 * When vim mode is normal '-- NORMAL --' is displayed in lower tool bar.
-* When vim moode is insert '-- INSERT --' is displayed
+* When vim mode is insert '-- INSERT --' is displayed
 * When vim mode is visual ( selecting text ) then "-- VISUAL --" is displayed
 * Press [Escape ESC] key to exit current command and return to "NORMAL" mode. If not in normal, press escape key again.
 
@@ -188,7 +188,7 @@ For default always on when opening vscode update the settings.json file to : "vi
 | ESC | [ Escape ] | I'm unsure what my command state is. Cancel pending commands and just return me to normal mode |
 | u | [ u ] | Undo last change |
 | i   | [ i ] | From normal mode enter insert mode to add remove characters |
-| a   | [ a ] | From normal mode enter insert mode afer current character |
+| a   | [ a ] | From normal mode enter insert mode after current character |
 | o   | [ o ] | Open new line below current line and switch to insert mode |
 | :e! | [ colon (:)] then [ e ] then [ ! ] then [ ENTER ] | Abandon changes and reload previously saved class definition from database |
 | :w | [ colon (:) ] then [ w ] then [ Enter ] | Save and compile
@@ -210,7 +210,7 @@ There are two clip boards:
 | Shift p | [Shift] + [p] | Paste line from vim clip board |
 | Shift X | [Shift] + [x] | Cut current line |
 | v | | Enter visual ( select mode ) on current character |
-| y | | Copy slected characters to vim clip board |
+| y | | Copy selected characters to vim clip board |
 | p | | Paste characters from vim clipboard |
 | x | | Cut selected characters |
 | :+y | [colon (:)] then [plus (+)] then [ y ] | In VISUAL mode, Copy the selected characters to Operating System Clipboard |
@@ -240,13 +240,13 @@ There are two clip boards:
 | Command | Keys | What it does |
 | --- | --- | --- |
 | :mark a |  | Create a bookmark on the current line called "a" |
-| `a | [ back tick (`) ] + [ a ] | Jump cursor to source code line with bookmark "a" |
+| `a | [ back tick (`) ] + [ a ] + [ Enter ] | Jump cursor to source code line with bookmark "a" |
 | :marks | | show all my bookmarks |
 | :delmarks a | | Delete bookmark "a" |
 | :delmarks! | | Delete lowercase bookmarks |
 | ] | [ close square bracket (]) ] Jump to previous bookmark |
 | [ | [ open square bracket ([\) ] jump to previous bookmark |
-| . | [ dot (.) ] + [ Enter ] | In normal mode. Jump to source code line where I did most recent edit change |
+| `. | [ back tick (`) ] then [ dot (.) ] + [ Enter ] | An automatic bookmark to where you last edited something. In normal mode use to jump to recent source code line |
 
 ## Characters with accents
 | Command | Keys | What it does |
@@ -257,7 +257,7 @@ There are two clip boards:
 
 
 # Limitations
-Webpages do not play well viewed within the Editor. Recommend open system management portal directly from host web browser to the IRIS appliance. For example: http://172.19.0.3:52773/iris/csp/sys/UtilHome.csp
+Web pages do not play well viewed within the Editor. Recommend open system management portal directly from host web browser to the IRIS appliance. For example: http://172.19.0.3:52773/iris/csp/sys/UtilHome.csp
 
 
 
