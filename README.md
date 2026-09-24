@@ -1,5 +1,5 @@
 # IRIS_Editor_IP_Safe
-A Docker appliance pre-installed with VSCode and IRIS Editor plugins without external AI connectivity.
+A Docker appliance pre-installed with VSCode and IRIS Editor plugins and optional VIM style editing without external AI connectivity.
 
 # Rationale
 I need an IRIS code editor on Ubuntu:
@@ -165,6 +165,92 @@ There is a terminal start shortcut off bottom RDP toolbar
 
 Example of IRIS Editor launch with some 'not connecting' messages:
 <img width="1042" height="866" alt="image" src="https://github.com/user-attachments/assets/2807156f-2bea-4b27-aac4-3bed867097c0" />
+
+# VIM style editing
+In open VSCode Editor, open the command pallate:
+[Shift} + [Control] + p
+Type:
+"Toggle VIM mode"
+Accept the selected option.
+
+Shortcut reminder with open code document.
+When vim mode is normal '-- NORMAL --' is displayed in lower tool bar.
+When vim moode is insert '-- INSERT --' is displayed
+When vim mode is visual ( selecting text ) then "-- VISUAL --" is displayed
+Press [Escape ESC] key to exit current command and return to "NORMAL" mode.
+
+| Command | Keys | What it does |
+| --- | --- | --- |
+| ESC | [ Escape ] | I'm unsure what my command state is. Cancel pending commands and just return me to normal mode |
+| u | [ u ] | Undo last change |
+| i   | [ i ] | From normal mode enter insert mode to add remove characters |
+| a   | [ a ] | From normal mode enter insert mode afer current character |
+| o   | [ o ] | Open new line below current line and switch to insert mode |
+| :e! | [ colon (:)] then [ e ] then [ ! ] then [ ENTER ] | Abandon changes and reload previously saved class definition from database |
+| :w | [ colon (:) ] then [ w ] then [ Enter ] | Save and compile
+| :q | [ colon (:) ] then [ q ] |- Close current document |
+| :q! | [ colon (:) ] then [ q ] then [ ! ] |- Close current document without saving |
+| :Ex | [ colon (:) ] then [ Shift ] + [ e ] then [ x ] then [ Enter ] | Switch from edit to Source file Explorer view |
+
+## Copy and Paste
+There are two clip boards:
+* Use the operating system clipboard to pass content between vscode and external tools.
+* Use the operating system clipboard to copy characters from document and paste into search command
+* Use the vim clipboard to pass content between document open in vscode
+
+| Command | Keys | What it does |
+| --- | --- | --- |
+| Shift o   | [Shift] + o | Open new line above current line and switch to insert mode |
+| Shift v | [Shift] + [v] | Select line | Select whole line switch to visual mode |
+| Shift y | [Shift] + [y] | Copy selected line to vim clipboard |
+| Shift p | [Shift] + [p] | Paste line from vim clip board |
+| Shift X | [Shift] + [x] | Cut current line |
+| v | | Enter visual ( select mode ) on current character |
+| y | | Copy slected characters to vim clip board |
+| p | | Paste characters from vim clipboard |
+| x | | Cut selected characters |
+| :+y | [colon (:)] then [plus (+)] then [ y ] | In VISUAL mode, Copy the selected characters to Operating System Clipboard |
+| Ctrl v | [ Ctrl ] + [ v ] | When in insert mode. Paste from operating system clipboard<br/> Note this is different because the Shift+Ctrl+v combination by default now opens up IRIS "other code view" for example: "int" code compiled from a class defintion |
+
+## Deleting
+| Command | Keys | What it does |
+| --- | --- | --- |
+| dd | [ d ] then [ d ] | delete current line |
+| 3dd | [ 3 ] then [ d ] then [ d ] | delete three code lines including the current one |
+
+## Search and replace
+| Command | Keys | What it does |
+| --- | --- | --- |
+| gd | [ g ] [ d ] | When normal mode and cursor is over class or method to jump to definition |
+| O | [ shift ] + [ o ] | Jump back to previous code position or file |
+| / | [ / ] | Enter search mode from normal mode |
+| /cla | [ / ] then [ c ] then [ l ] then [ a ] | Search for the character sequence "cla" in the current file |
+| /method |  | Search for character sequence 'method' in the current file |\
+| /[^,]$ | | Find all lines that don't end in a comma |
+| n | [ n ] | When in search mode, Move to the next found item |
+| Ctrl + n | [ CTRL ] + [ n ] | When in search mode, Move to the previous found item |
+| / Up | [ / ] then [ Up key ] | Toggle through previous search commands | 
+| :1,10s/ABC/abc/g |  | Replace example: From the first to the tenth line of the source file, replace all character sequences containing "ABC" with "abc" |
+
+## Bookmarks
+| Command | Keys | What it does |
+| --- | --- | --- |
+| :mark a |  | Create a bookmark on the current line called "a" |
+| `a | [ back tick (`) ] + [ a ] | Jump cursor to source code line with bookmark "a" |
+| :marks | | show all my bookmarks |
+| :delmarks a | | Delete bookmark "a" |
+| :delmarks! | | Delete lowercase bookmarks |
+| ] | [ close square bracket (]) ] Jump to previous bookmark |
+| [ | [ open square bracket ([\) ] jump to previous bookmark |
+| . | [ dot (.) ] + [ Enter ] | In normal mode. Jump to source code line where I did most recent edit change |
+
+## Characters with accents
+| Command | Keys | What it does |
+| --- | --- | --- |
+| ctrl+k e^ | [ Ctrl ] + [ k ] then [ e ] then [ carrot (^) ] | Adds letter ê. An "e" with accent "^" |
+| ctrl+k e' | [ Ctrl ] + [ k ] then [ e ] then [ single quote (') | Adds letter é. An "e" with accent "'" |
+
+
 
 # Limitations
 Webpages do not play well viewed within the Editor. Recommend open system management portal directly from host web browser to the IRIS appliance. For example: http://172.19.0.3:52773/iris/csp/sys/UtilHome.csp
