@@ -39,8 +39,11 @@ RUN mkdir -p /home/ubuntu/.config/Code/User
 RUN mkdir -p /home/ubuntu/src
 COPY --chown=ubuntu:ubuntu vscode-objectscript-3.8.6-beta.3.vsix /home/ubuntu/vscode_ext/vscode-objectscript-3.8.6-beta.3.vsix
 COPY --chown=ubuntu:ubuntu intersystems.language-server-2.8.5.vsix /home/ubuntu/vscode_ext/intersystems.language-server-2.8.5.vsix
+COPY --chown=ubuntu:ubuntu vim-1.32.4.vsix /home/ubuntu/vscode_ext/vim-1.32.4.vsix
 RUN code --no-sandbox --install-extension /home/ubuntu/vscode_ext/vscode-objectscript-3.8.6-beta.3.vsix --user-data-dir /home/ubuntu/
 RUN code --no-sandbox --install-extension /home/ubuntu/vscode_ext/intersystems.language-server-2.8.5.vsix --user-data-dir /home/ubuntu/
+RUN code --no-sandbox --install-extension /home/ubuntu/vscode_ext/vim-1.32.4.vsix --user-data-dir /home/ubuntu/
+
 # Add default example connection configuration for InterSystems plugins
 COPY --chown=ubuntu:ubuntu settings.json /home/ubuntu/.config/Code/User/settings.json
 

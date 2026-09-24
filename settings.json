@@ -18,5 +18,7 @@
             },
             "username": "superuser"
         }
-    }
+    },
+    
+    "vim.disableExtension": true
 }
