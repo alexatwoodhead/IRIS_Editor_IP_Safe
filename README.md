@@ -166,18 +166,22 @@ There is a terminal start shortcut off bottom RDP toolbar
 Example of IRIS Editor launch with some 'not connecting' messages:
 <img width="1042" height="866" alt="image" src="https://github.com/user-attachments/assets/2807156f-2bea-4b27-aac4-3bed867097c0" />
 
-# VIM style editing
+# VIM style IRIS editing
 In open VSCode Editor, open the command pallate:
-[Shift} + [Control] + p
-Type:
-"Toggle VIM mode"
+
+[Shift] + [Control] + p
+
+Type: "Toggle VIM mode"
+
 Accept the selected option.
 
-Shortcut reminder with open code document.
-When vim mode is normal '-- NORMAL --' is displayed in lower tool bar.
-When vim moode is insert '-- INSERT --' is displayed
-When vim mode is visual ( selecting text ) then "-- VISUAL --" is displayed
-Press [Escape ESC] key to exit current command and return to "NORMAL" mode.
+Shortcuts reminder with code document in view
+* When vim mode is normal '-- NORMAL --' is displayed in lower tool bar.
+* When vim moode is insert '-- INSERT --' is displayed
+* When vim mode is visual ( selecting text ) then "-- VISUAL --" is displayed
+* Press [Escape ESC] key to exit current command and return to "NORMAL" mode. If not in normal, press escape key again.
+
+For default always on when opening vscode update the settings.json file to : "vim.disableExtension": false
 
 | Command | Keys | What it does |
 | --- | --- | --- |
